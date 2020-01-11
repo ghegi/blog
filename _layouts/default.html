@@ -11,12 +11,131 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
+    
+    <!--- GHEGI COPIED---->
+    <link id="theme" rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/fixed.css">
+    <script src="https://kit.fontawesome.com/1456facb39.js" crossorigin="anonymous"></script>
+    <!----GHEGI END----->
+    
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
+    
+    <!---- Start HOME section-->
+
+    <div id="home">
+        <!--- Navigation-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="index.html"><img style="user-select: none;" src="img/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!---navitems-->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#news" class="nav-link">
+                            News
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#connect" class="nav-link">
+                            Connect
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Start Image Slider-->
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="7000">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+
+                </li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1">
+
+                </li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2">
+
+                </li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+
+                <div class="carousel-item active" style="background-image: url(https://i.imgur.com/bzdFHGw.png)">
+                    <div class="carousel-caption text-center">
+                        <h1>Desert Duel</h1>
+                        <h3>Test your reflexes against your friend with this cute action PvP mobile game!</h3>
+                        <a class="btn btn-outline-light btn-lg" href="https://ghegijmnz.itch.io/desert-duel">
+                            Download for Android <i style="margin-left: 0.7rem" class="fab fa-android"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--- Slide 2 --->
+
+                <div class="carousel-item" style="background-image: url('https://i.imgur.com/VE6evpB.jpg')">
+                    <div class="carousel-caption text-center">
+                        <h1>Louija</h1>
+                        <h3>Coming soon to Android</h3>
+                        <a class="btn btn-outline-light btn-lg" href="#home">
+                            Be a beta tester
+                        </a>
+                    </div>
+                </div>
+
+                <!--- Slide 3 --->
+
+                <div class="carousel-item" style="background-image: url(https://i.imgur.com/TYGpHyJ.png)">
+                    <div class="carousel-caption text-center">
+                        <h1>Watch me make games</h1>
+                        <h3>I make videos of my drawings, animations, and record myself making games.</h3>
+                        <a class="btn btn-outline-light btn-lg" href="#home">
+                            Subscribe <i style="margin-left: 0.7rem" class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--End Image Slider-->
+
+        <!-- Prev & Next -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <!---- End HOME section-->
+    
+    <!--- <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
@@ -32,7 +151,7 @@
           </nav>
         </header>
       </div>
-    </div>
+    </div> ---->
 
     <div id="main" role="main" class="container">
       {{ content }}
@@ -47,5 +166,12 @@
     </div>
 
     {% include analytics.html %}
+    
+    <!----- JS----->
+    
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    
   </body>
 </html>

@@ -3,17 +3,17 @@ layout: default
 ---
 
   {% for post in site.posts %}
-<div class="col-sm-4 card border-0 shadow-sm p-3 mb-5 bg-white rounded ">
-    <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<div class="col-sm-4 card border-0 shadow-sm  rounded" style="height: 20rem;">
+<div class="card-body">
+     <h1><a class="card-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+           <div class="entry card-text">
+                {{ post.excerpt }}
+           </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+      <a href="{{ site.baseurl }}{{ post.url }} " class="read-more btn btn-primary">Read More</a>
+</div>       
 </div>
 
   {% endfor %}

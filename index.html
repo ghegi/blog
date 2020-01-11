@@ -5,20 +5,17 @@ layout: default
   {% for post in site.posts %}
 
                 <div class="col-sm-4 card border-0 shadow-sm  rounded" style="height: 20rem;">
-                  
-                  <div class="card-body">
                        
-                          <h1><a class="card-title news-title" href="{{ site.baseurl }}{{ post.url }}" ><!--{{ post.title }}-->asdasd</a></h1>
+                          <h1><a class="news-title" href="{{ site.baseurl }}{{ post.url }}" >{{ post.title }}</a></h1>
                     
-                            <p class="lead">
+                            <div class="lead">
                               
-                              <!--- {{ post.excerpt }}--->asdasd
+                              {{ post.excerpt }}
                               
-                            </p>
+                            </div>
                     
                           <a href="{{ site.baseurl }}{{ post.url }} " class="read-more btn btn-primary" style="position: absolute;        bottom:1.5rem; margin: 0 auto;">Read More</a>
                      
-                  </div>       
                   
                 </div> 
   {% endfor %}

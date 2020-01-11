@@ -13,11 +13,23 @@ body {
     color: #2A2022 ;
 }
 
-.btn-secondary {
-    background: #FF334F !important;
+.news-title {
+    color: #FF334F;
 }
 
-.btn-secondary:hover{
+
+.news-title:hover {
+    color: #FF526A;
+    text-decoration: none;
+}
+
+.btn-secondary, .btn-primary {
+    background: #FF334F !important;
+    border: none;
+}
+
+.btn-secondary:hover ,.btn-primary:hover{
+    border: none;
     background: #FF526A !important;
 }
 
@@ -30,8 +42,11 @@ body {
 .scrolling-wrapper {
   overflow-x: scroll;
   overflow-y: hidden;
-  white-space: nowrap
-    
+  white-space: nowrap;
+}
+
+.lead{
+    white-space: normal !important;
 }
 
 ::-webkit-scrollbar {

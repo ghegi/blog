@@ -5,15 +5,13 @@ layout: default
   {% for post in site.posts %}
 
 <div class="col-sm-4 card border-0 shadow-sm  rounded" style="height: 20rem;">
-<div class="card-body">
-     <h1><a class="card-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-           <div class="entry card-text">
-                {{ post.excerpt }}
-           </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }} " class="read-more btn btn-primary">Read More</a>
-</div>       
-</div>
-
+                     <div class="card-body">
+                          <h1><a class="card-title news-title" href="{{ site.baseurl }}{{ post.url }}" >{{ post.title }}</a></h1>
+                            <h3 class="text-muted" style="font-size: 1rem;">{{ page.date | date: "%B %e, %Y" }}</h3>
+                            <p class="lead">
+                               {{ post.excerpt }}
+                            </p>
+                          <a href="{{ site.baseurl }}{{ post.url }} " class="read-more btn btn-primary" style="position: absolute; bottom:1.5rem; margin: 0 auto;">Read More</a>
+                    </div>       
+                </div>
   {% endfor %}

@@ -10,7 +10,7 @@ layout: default
                     
                             <div class="lead">
                               
-                              {{ post.excerpt }}
+                              {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
                               
                             </div>
                     

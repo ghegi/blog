@@ -18,9 +18,6 @@ body {
     font-size: 2rem;
 }
 
-div.lead {
-    font-size: 1rem;
-}
 
 
 .news-title:hover {
@@ -229,6 +226,7 @@ hr.socket
 
 .card-img-top {
 }
+
 .codeCard
 {
     color: #ff922b;
@@ -253,13 +251,50 @@ hr.socket
     padding-bottom: 1rem;
 }
 
+div.lead {
+    font-size: 1.3rem;
+}
 
-    
-    div.lead {
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-    }
+
+/* styles for '...' */ 
+div.lead {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1.5rem;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 10.5rem; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;  
+  /* place for '...' */
+  margin-right: -2em;
+  padding-right: 2em;
+}
+/* create the ... */
+div.lead:before {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+div.lead:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+}
 
 
 /*==== media queries----*/

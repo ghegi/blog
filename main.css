@@ -7,6 +7,12 @@
     display: block;
 }
 
+.news-box {
+    background: url(img/louija.jpg);
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 body {
     overflow-x: hidden !important;
     font-family: 'Lato', sans-serif;
@@ -17,6 +23,7 @@ body {
     color: #FF334F;
     font-size: 2rem;
 }
+
 
 
 .news-title:hover {
@@ -65,10 +72,12 @@ body {
 }
 
 
-.scrolling-wrapper .card {
+  .scrolling-wrapper .card {
     display: inline-block;
-    vertical-align: top;
+      vertical-align: top;
   }
+
+
 
 
 /*=== Navbar ===*/
@@ -299,6 +308,50 @@ div.lead:after {
 }
 
 
+.post-box{
+    padding: 4rem;
+    width: 80%;
+}
+
+
+.post-container {
+    
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+}
+
+
+
+.pager {
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: center;
+    list-style: none;
+}
+
+.pager li{
+    display: inline;
+}
+
+.pager li a
+{
+    
+    font-size: 1.3rem;
+    color: #FF334F;
+}
+
+.pager .previous>a {
+    float: left;
+}
+
+
+.pager .next>a {
+    float: right;
+}
+
+
+
 /*==== media queries----*/
 @media (max-width: 277px) {
     
@@ -308,6 +361,23 @@ div.lead:after {
 }
 
 @media (max-width: 767px) {
+    
+    
+.post-box{
+    padding: 2rem;
+    width: 100%;
+}
+    
+    
+    h3.heading
+    {
+        font-size: 1.5rem; 
+    }
+    
+    h4.text-muted
+    {
+        font-size: 1.2rem;
+    }
     
     .news-title{
         font-size: 1.5rem;

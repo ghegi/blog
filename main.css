@@ -19,7 +19,7 @@ body {
 }
 
 div.lead {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
@@ -252,6 +252,14 @@ hr.socket
     padding-top: 2.5rem;
     padding-bottom: 1rem;
 }
+
+
+    
+    div.lead {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+    }
 
 
 /*==== media queries----*/

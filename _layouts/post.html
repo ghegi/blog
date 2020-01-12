@@ -1,19 +1,64 @@
 ---
-layout: default
+layout: postdisplay
 ---
 
-<div class="col-sm-4 card border-0 shadow-sm p-3 mb-5 bg-white rounded ">
-  <article class="post">
-  <h1>{{ page.title }}</h1>
+<div id="news-post" class="offset">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center" style = "padding-top: 4rem;">
+                    <br>
+                    <br>
+                    <h3 class="heading blog-title">
+                        {{ page.title }}
+                    </h3>
+                    <h4 class="text-muted">
+                        {{ page.date | date: "%B %e, %Y" }}
+                    </h4>
+                    <br>
+                    <br>
+                    <div class="heading-underline"></div>
+                </div>
+            </div>
+            
+            <div class="row post-container">
+                
+            <div class="post-box card shadow-sm border-0">
+                
+                <div class="post-entry">
+                    
+                    {{ content }}
+                    
+                    
+                </div>
+                
+                <br>
+                <hr>
+                <br>
+                
+                
+                
+                <ul class="pager blog-pager">
+        
+                        <li class="previous">
+                                    <a class="" href="{{page.previous.url}}">Previous Post</a>
+                        </li>
 
-  <div class="entry">
-    {{ content }}
-  </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
-  {% include disqus.html %}
-  </article>
-</div>
+                        <li class="next">
+                                    <a class="" href="{{page.next.url}}">Next Post</a>
+                        </li>
+        
+                   </ul>
+                    
+                
+                
+                
+                
+            </div>
+                
+                    
+                
+            </div>
+            
+        </div>
+    </div>

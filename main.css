@@ -19,7 +19,6 @@ body {
 }
 
 
-
 .news-title:hover {
     color: #FF526A;
     text-decoration: none;
@@ -66,9 +65,9 @@ body {
 }
 
 
-  .scrolling-wrapper .card {
+.scrolling-wrapper .card {
     display: inline-block;
-      vertical-align: top;
+    vertical-align: top;
   }
 
 

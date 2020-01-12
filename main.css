@@ -68,7 +68,10 @@ body {
 
   .scrolling-wrapper .card {
     display: inline-block;
+      vertical-align: top;
   }
+
+
 /*=== Navbar ===*/
 
 .navbar {

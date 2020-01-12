@@ -298,6 +298,12 @@ div.lead:after {
 
 
 /*==== media queries----*/
+@media (max-width: 277px) {
+    
+    a.text-muted{
+        display: none;
+    }
+}
 
 @media (max-width: 767px) {
     

@@ -38,15 +38,20 @@ layout: postdisplay
                 
                 
                 <ul class="pager blog-pager">
-        
+                        
+                        {% if page.previous.url %}
                         <li class="previous">
                                     <a class="" href="{{page.previous.url}}">Previous Post</a>
                         </li>
+                        {% endif %}
 
-
+                        
+                         {% if page.next.url %}
                         <li class="next">
                                     <a class="" href="{{page.next.url}}">Next Post</a>
                         </li>
+                        
+                        {% endif %}
         
                    </ul>
                     

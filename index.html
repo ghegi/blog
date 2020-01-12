@@ -14,6 +14,8 @@ layout: default
                               {% assign excerpt_word_count = post.excerpt | number_of_words %}
                               {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
                               
+                              {{ post.date | date: site.date_format }}
+                              
                             </div>
                     
                           <a href="{{ site.baseurl }}{{ post.url }} " class="read-more btn btn-primary" style="position: absolute;        bottom:1.5rem; margin: 0 auto;">Read More</a>
